@@ -1,0 +1,36 @@
+@font-face {
+  font-family: "Noto-Sans";
+  src: url("../src/assets/fonts/NotoSans-Regular.ttf");
+  src: url("../src/assets/fonts/NotoSans-Bold.ttf");
+  src: url("../src/assets/fonts/NotoSans-Medium.ttf");
+}
+
+@font-face {
+  font-family: "Poppins";
+  src: url("../src/assets/fonts/Poppins-Regular.ttf");
+  src: url("../src/assets/fonts/Poppins-Bold.ttf");
+  src: url("../src/assets/fonts/Poppins-Medium.ttf");
+}
+
+@font-face {
+  font-family: "Inter";
+  src: url("../src/assets/fonts/Inter_18pt-Regular.ttf");
+  src: url("../src/assets/fonts/Inter_18pt-Bold.ttf");
+  src: url("../src/assets/fonts/Inter_24pt-Medium.ttf");
+}
+
+@import "tailwindcss";
+
+
+@theme {
+  --font-sans: "Noto-Sans", "sans-serif";
+  --font-poppins: "Poppins", "sans-serif";
+  --font-inter: "Inter", "sans-serif";
+}
+body {
+  background-color: #ffffff;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  overflow-x: hidden;
+}

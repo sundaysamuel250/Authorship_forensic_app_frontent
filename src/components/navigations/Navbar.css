@@ -1,0 +1,136 @@
+/* Navbar.css */
+
+.navbar-wrapper {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: #ffffff;
+    z-index: 1000;
+  }
+  
+  .navbar-container {
+    width: 100%;
+    margin: 0;
+    padding: 0.5rem 4rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .rotate-0 {
+  transform: rotate(0deg);
+  }
+  
+  .rotate-180 {
+  transform: rotate(180deg);
+  }
+  
+  .transition-transform {
+  transition: transform 0.3s ease;
+  }
+  
+  
+  .logo {
+    font-size: 28px;
+    color: white;
+  }
+  
+  .menu-toggle {
+    display: none; /* Hide by default on larger screens */
+    cursor: pointer;
+  }
+  
+  .icon {
+    font-size: 24px;
+  }
+  
+  .navbar-menu {
+    display: grid;
+    grid-template-columns: repeat(8, auto);
+    grid-gap: 10px;
+    list-style: none;
+    text-align: center;
+    width: 70vw;
+    margin-left: 2rem;
+    justify-content: end;
+  }
+  
+  .menu-link {
+    padding: 5px 0px;
+    margin: 0 5px;
+    text-decoration: none;
+    color: #646A73;
+    margin-right: 10px;
+  }
+  
+  .menu-link:hover {
+    /* border-bottom: 3px solid #EE009D;  */
+    color: #E1B04A;
+  }
+  
+  
+  .menu-link.active,
+  .menu-link.active:hover {
+  color: #E1B04A; /* Change the color to the desired color */
+  /* border-bottom: 3px solid #EE009D;; */
+  margin: 0 1rem; /* Adjust the margin as needed */
+  }
+  
+  /* Media query for smaller screens */
+  @media only screen and (max-width: 767px) {
+    .menu-toggle {
+      display: block; /* Show toggle button */
+    }
+  
+    .navbar-container {
+       width: 100%;
+       padding: 1rem;
+       display: flex;
+       justify-content: space-between;
+       align-items: center;
+     }
+  
+     .icon{
+      margin-right: 1rem;
+     }
+  
+    .navbar-menu {
+      display: none; /* Hide menu by default on smaller screens */
+      position: absolute;
+      align-items: start;
+      padding: 1rem;
+      top: 100%;
+      left: -8%;
+      width: 100%;
+      background-color: #FFFFFF;
+      flex-direction: column;
+    }
+    .menu-link.active,
+  .menu-link.active:hover{
+  margin: 0 0.2rem; 
+  color: #2AA100; /* Change the color to the desired color */
+  /* border-bottom: 3px solid #EE009D; */
+  align-items: start;
+  }
+  
+    .navbar-menu.open {
+      display: flex; /* Show menu when open */
+      animation: slideDown 1s forwards; /* Add slide down animation */
+    }
+  
+    @keyframes slideDown {
+      from {
+        opacity: 0;
+        transform: translateY(-20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+  
+    .menu-link {
+      padding: 10px 0px;
+      margin: 0 15px;
+      text-align: left;
+    }
+  }
